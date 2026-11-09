@@ -45,7 +45,7 @@ const details = [
     {
         element: document.getElementById("gender"),
         label: "Gender",
-        value: () => randomItem(["Male","Female", "Transgender", "Alien"])
+        value: () => gender(["Male","Transgender", "Female", "Alien"])
     },
     {
         element: document.getElementById("job"),
@@ -67,7 +67,21 @@ const details = [
 function randomItem(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
-
+function gender(array){
+    let randNum = Math.floor(Math.random()*1000);
+    if(randNum <= 250){
+        return array[0];
+    }
+    else if(randNum <= 500){
+        return array[1];
+    }
+    else if(randNum <= 750){
+        return array[2];
+    }
+    else if(randNum <= 1000){
+        return array[3];
+    }
+}
 
 const steps = document.querySelectorAll(".step");
 const progressFill = document.getElementById("progress-fill");
