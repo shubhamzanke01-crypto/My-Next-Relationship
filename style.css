@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+     filter:
+        brightness(1.08)
+        contrast(1.15)
+        saturate(1.3)
+        sepia(0.08)
+        hue-rotate(-5deg); 
+        
+}
+.container .inner{
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    color: rgb(255, 0, 149);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 7vw;
+}
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 50px auto;
+    position: relative;
+}
+
+.progress-line {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background:pink;
+    top: 10px;
+    z-index: 0;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: rgb(247, 24, 61);
+    transition: width 0.4s ease;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid white;
+    transition: 0.3s;
+}
+
+.step.active .dot {
+    background: rgb(255, 0, 149);
+    
+}
+
+.step p {
+    color: black;
+    font-size: 2vw;
+}
+
+button{
+    height: 35px;
+    width: 120px;
+    background-color: rgb(255, 0, 149);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 50%;
+    font-size: 17px;
+}
+button:hover{
+    background-color: rgb(199, 62, 142);
+}
