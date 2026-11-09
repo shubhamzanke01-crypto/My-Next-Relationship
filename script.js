@@ -1,4 +1,8 @@
+const audio = document.getElementById("bg-audio");
 
+document.addEventListener("click", () => {
+    audio.play();
+}, { once: true });
 const camera = document.getElementById("camera");
 
 async function showCamera() {
